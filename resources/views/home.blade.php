@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Blankblank</h1>
+                    <h1>Blankblankv2</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="card-body">
-                Start creating your amazing application!
+                Start creating your amazing application! no.
             </div>
             <!-- /.card-body -->
             <div class="card-footer">

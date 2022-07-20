@@ -179,9 +179,8 @@
                             <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                         </div>
                         <div class="info">
-                            <a href="#" class="d-block">{{ Auth::user()->name }}</a> <span><a href="#">{{
-                                    Auth::user()->hak_akses }}</a></span>
-
+                            <a href="#" class="d-block">{{ Auth::user()->name }} - {{
+                                Auth::user()->hak_akses }}</a>
                         </div>
                     </div>
 
