@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('kat_tokos', function (Blueprint $table) {
-            $table->id('id_kat_toko');
-            $table->string('kategori');
+        Schema::create('regisv2s', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('contact_no');
+            $table->string('half_body_image');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kat_tokos');
+        Schema::dropIfExists('regisv2s');
     }
 };
