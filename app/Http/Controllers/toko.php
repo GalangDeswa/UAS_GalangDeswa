@@ -2,31 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\kat_toko as ModelsKat_toko;
 use Illuminate\Http\Request;
 
-class kat_toko extends Controller
+class toko extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-
-
-     public function __construct()
-     {
-     $this->middleware('auth');
-     }
-
-
-
+    public function __construct()
+    {
+    $this->middleware('auth');
+    }
+    
     public function index()
     {
-        $nomor= 1;
-        $kat = ModelsKat_toko::all();
-        return view('kat_toko.index',compact('kat','nomor'));
-        
+        //
     }
 
     /**
@@ -36,7 +28,7 @@ class kat_toko extends Controller
      */
     public function create()
     {
-         return view('kat_toko.create');
+        //
     }
 
     /**
@@ -47,19 +39,7 @@ class kat_toko extends Controller
      */
     public function store(Request $request)
     {
-        $tambah = new ModelsKat_toko();
-
-        $request->validate(
-        [
-        'kategori_toko' => 'required',
-        ]
-        );
-
-        $tambah->kategori_toko = $request->kategori_toko;
-
-        $tambah->save();
-
-        return redirect('/kat_toko');
+        //
     }
 
     /**
