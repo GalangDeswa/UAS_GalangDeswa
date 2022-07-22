@@ -42,4 +42,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function r_toko_user(){
+    return $this->belongsTo(toko::class,'id_user');
+    }
 }

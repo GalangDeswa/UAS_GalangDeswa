@@ -23,7 +23,7 @@ class kat_toko extends Controller
 
     public function index()
     {
-        $nomor= 1;
+        $nomor= 0;
         $kat = ModelsKat_toko::all();
         return view('kat_toko.index',compact('kat','nomor'));
         
@@ -80,8 +80,11 @@ class kat_toko extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+
+    {   
+         
+         $edit = ModelsKat_toko::find($id);
+         return view('kat_toko.edit',compact('edit'));
     }
 
     /**
@@ -93,7 +96,11 @@ class kat_toko extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $edit = ModelsKat_toko::find($id);
+         $edit->kategori_toko = $request->kategori_toko;
+
+         $edit->save();
+         return redirect('/kat_toko');
     }
 
     /**
@@ -104,6 +111,9 @@ class kat_toko extends Controller
      */
     public function destroy($id)
     {
-        //
+         $hapus = ModelsKat_toko::find($id);
+         $hapus->delete();
+
+         return redirect('/kat_toko');
     }
 }

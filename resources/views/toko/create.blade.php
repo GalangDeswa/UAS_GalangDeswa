@@ -1,37 +1,70 @@
-@extends('master')
-@section('title','barang')
-@section('barang','active')
+@extends('layouts.master')
+
 @section('content')
 
+<div class="content-wrapper">
+    <form action="/toko/tambah" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('POST')
+        <div class="card-body">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nama toko</label>
+                <input type="text" name="nama_toko" class="form-control" id="exampleInputEmail1"
+                    placeholder="masukan nama toko">
+            </div>
+
+            <div class="form-group">
+                <h6>Kategori barang</h6>
+                <div class="form-control">
+                    <select name="id_kategori_toko" id="" @error('id_kat_barang') is-invalid" @enderror
+                        value="{{old('id_kat_barang')}}">
+                        <option value="">Pilih Kategori barang</option>
+                        @foreach ($kat as $item)
+                        <option value={{$item->id_kat_toko}}>{{$item->kategori_toko}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">desc</label>
+                <input type="text" name="desc_toko" class="form-control" id="exampleInputEmail1"
+                    placeholder="masukan desc toko">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">pemilik</label>
+                <input type="text" name="pemilik" class="form-control" id="exampleInputEmail1"
+                    placeholder="masukan pemilik toko">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">alamat</label>
+                <input type="text" name="alamat" class="form-control" id="exampleInputEmail1"
+                    placeholder="masukan alamat toko">
+            </div>
 
 
-<form action="/kategori/tambah" method="POST">
-    @csrf
-    @method('POST')
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">password</label>
+                <input type="password" name="password" class="form-control" id="exampleInputEmail1"
+                    placeholder="masukan password toko">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Foto</label>
+                <input type="file" name="foto" class="form-control" id="exampleFormControlInput1"
+                    placeholder="foto toko" value="{{old('foto')}}" @error('foto') is-invalid" @enderror>
+            </div>
 
 
-    <div class="form-group">
-        <label for="exampleFormControlInput1">Nama kategori</label>
-        <input type="Text" name="kategori" value="{{old('kategori')}}"
-            class="form-control @error('kategori') is-invalid" id="exampleFormControlInput1" placeholder="" @enderror>
-    </div>
-    @error('kategori')
-    <div class="text-danger">{{$message}}</div>
-    @enderror
-
-
-
-    <br>
-    <div class="row">
-
-        <!-- /.col -->
-        <div class="col-12 text-end mt-3">
-            <button type="submit" class="btn btn-info w-p100 mt-15">tambah</button>
         </div>
-        <!-- /.col -->
-    </div>
+        <!-- /.card-body -->
 
-</form>
-
-
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
 @endsection
