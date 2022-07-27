@@ -7,6 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class foto_barang extends Model
 {
-    use HasFactory;
+    protected $table = 'foto_barangs';
     protected $primaryKey = 'id_foto_barang';
+    protected $fillable = [
+    'foto',
+    'id_barang',
+    ];
 }

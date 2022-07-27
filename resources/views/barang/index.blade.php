@@ -55,7 +55,7 @@
                                 <td class="text-center">{{ $data->kondisi}}</td>
 
                                 <td class="text-center">{{ $data->kat_barang->kategori_barang}}</td>
-                                <td class="text-center">{{ $data->id_toko_barang}}</td>
+                                <td class="text-center">{{ $data->nama_toko->nama_toko}}</td>
                                 {{-- <td class="text-center">{{ $data->nama_toko->nama_toko}}</td> --}}
                                 <td class="text-center">{{ $data->desc_barang}}</td>
                                 {{-- <td class="text-center">{{ $data->r_user->name}}</td> --}}

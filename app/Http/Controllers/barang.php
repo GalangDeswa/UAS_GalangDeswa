@@ -56,6 +56,7 @@ class barang extends Controller
     public function store(Request $request)
     {
         $tambah = new ModelsBarang();
+        
 
        /*  $request->validate(
         [
@@ -78,12 +79,25 @@ class barang extends Controller
         $tambah->id_toko_barang = $request->id_toko_barang;
         $tambah->kondisi = $request->kondisi;
         $tambah->waktu = Carbon::now();
-        if($request->hasFile('id_foto')){
-        $nama = $request->id_foto->getClientOriginalName();
-        $tambah->id_foto=$request->id_foto->move('barangv2',$nama);
+        $tambah->save();
+        $id_barang = $tambah->id_barang;
+
+        // if($image= $request->file('foto')){
+
+        foreach($request->foto as $file){
+            $foto = new foto_barang();
+            
+            $foto -> id_barang = $id_barang;
+            $name = $file->getClientOriginalName();
+            $foto->foto= $file->move('foto barangv3',$name);
+            $foto -> save();
+
         }
 
-        $tambah->save();
+
+        // }
+
+        
         return redirect('/barang');
     }
 

@@ -7,11 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class barang extends Model
 {
-    use HasFactory;
+    // use HasFactory;
+    protected $table = 'barangs';
     protected $primaryKey = 'id_barang';
 
    public function nama_toko(){
-   return $this->belongsTo(toko::class,'id_toko','id_toko_barang');
+   return $this->hasOne(toko::class,'id_toko','id_toko_barang');
 
    }
 
