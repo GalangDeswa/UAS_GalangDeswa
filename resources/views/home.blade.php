@@ -86,7 +86,7 @@
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="/kat_toko" class="small-box-footer">Table kategori toko <i
+                        <a href="/kat_barang" class="small-box-footer">Table kategori barang <i
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>

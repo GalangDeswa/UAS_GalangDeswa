@@ -155,20 +155,7 @@
                                             <div class="modal-body text-center">
                                                 @foreach ($data->r_barang as $item)
                                                 <h5>{{$item->nama_barang}}</h5>
-                                                {{-- <table>
-                                                    <tr>
-                                                        <th class="text-center">nama barang</th>
-                                                        <th class="text-center">harga</th>
-                                                        <th class="text-center">qty</th>
 
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-center">{{$item->nama_barang}}</td>
-                                                        <td class="text-center">{{$item->harga}}</td>
-                                                        <td class="text-center">{{$item->qty_barang}}</td>
-
-                                                    </tr>
-                                                </table> --}}
 
                                                 @endforeach
 

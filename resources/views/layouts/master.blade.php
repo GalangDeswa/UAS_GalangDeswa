@@ -294,12 +294,14 @@
                                             <p>Table barang</p>
                                         </a>
                                     </li>
+
                                     <li class="nav-item">
                                         <a href="/kat_barang" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Table kategori barang</p>
                                         </a>
                                     </li>
+
                                 </ul>
                             </li>
 

@@ -21,6 +21,7 @@ class kat_barang extends Controller
 
     public function index()
     {
+       
          $nomor= 0;
          $kat = ModelsKat_barang::all();
          return view('kat_barang.index',compact('kat','nomor'));
@@ -33,6 +34,7 @@ class kat_barang extends Controller
      */
     public function create()
     {
+        $this->authorize('create',barang::class);
         return view('kat_barang.create');
     }
 
@@ -44,6 +46,7 @@ class kat_barang extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create',kat_barang::class);
          $tambah = new ModelsKat_barang();
 
          $request->validate(
