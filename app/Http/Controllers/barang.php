@@ -42,10 +42,11 @@ class barang extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    { $this->authorize('create',barang::class);
+    {   $this->authorize('create',barang::class);
         $kat=kat_barang::all();
+        $toko=toko::all();
 
-         return view('barang.create',compact('kat'));
+         return view('barang.create',compact('kat','toko'));
     }
 
     /**

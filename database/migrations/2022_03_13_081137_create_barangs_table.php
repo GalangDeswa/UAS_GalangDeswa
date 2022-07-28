@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id('id_barang');
             $table->string('nama_barang');
             $table->string('kondisi');
-            $table->string('id_toko');
+            $table->string('id_toko_barang');
             $table->string('id_kategori_barang');
             $table->string('harga_diskon')->nullable();
             $table->string('harga');

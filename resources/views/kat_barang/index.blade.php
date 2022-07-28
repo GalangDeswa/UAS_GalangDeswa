@@ -7,7 +7,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Table kat toko</h3>
+                    <h3 class="card-title">Table kategori barang</h3>
 
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
@@ -28,9 +28,9 @@
                         <thead>
                             <tr>
                                 <th width="20px" class="text-center">No</th>
-                                <th width="280px" class="text-center">kategori</th>
+                                <th width="280px" class="text-center">kategori barang</th>
                                 <th width="280px" class="text-center"><a class="btn btn-primary btn-sm"
-                                        href="/kat_toko/form">tambah</a></th>
+                                        href="/kat_barang/form">tambah</a></th>
 
 
                             </tr>
@@ -40,24 +40,25 @@
 
                             <tr>
                                 <td class="text-center">{{ ++$nomor }}</td>
-                                <td class="text-center">{{ $data->kategori_toko}}</td>
+                                <td class="text-center">{{ $data->kategori_barang}}</td>
                                 <td class="text-center">
 
 
 
                                     <a class="btn btn-primary btn-sm"
-                                        href="/kat_toko/formedit/{{$data->id_kat_toko}}"><i class="fa fa-edit"></i></a>
+                                        href="/kat_barang/formedit/{{$data->id_kat_barang}}"><i
+                                            class="fa fa-edit"></i></a>
 
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                                        data-target="#b{{$data->id_kat_toko}}">
+                                        data-target="#b{{$data->id_kat_barang}}">
                                         <i class="fa fa-trash"></i>
                                     </button>
 
                                 </td>
 
 
-                                <div class="modal fade" id="b{{$data->id_kat_toko}}" tabindex="-1" role="dialog"
+                                <div class="modal fade" id="b{{$data->id_kat_barang}}" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
@@ -69,14 +70,15 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                ingin menghapus {{$data->kategori_toko}}?
+                                                ingin menghapus {{$data->kategori_barang}}?
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary"
                                                     data-dismiss="modal">Close</button>
 
 
-                                                <form action="/kat_toko/delete/{{$data->id_kat_toko}}" method="post">
+                                                <form action="/kat_barang/delete/{{$data->id_kat_barang}}"
+                                                    method="post">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-primary">hapus</button>

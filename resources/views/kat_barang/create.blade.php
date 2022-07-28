@@ -3,14 +3,14 @@
 @section('content')
 
 <div class="content-wrapper">
-    <form action="/kat_toko/tambah" method="POST">
+    <form action="/kat_barang/tambah" method="POST">
         @csrf
         @method('POST')
         <div class="card-body">
             <div class="form-group">
-                <label for="exampleInputEmail1">Kategori toko</label>
-                <input type="text" name="kategori_toko" class="form-control" id="exampleInputEmail1"
-                    placeholder="masukan kategori toko">
+                <label for="exampleInputEmail1">Kategori barang</label>
+                <input type="text" name="kategori_barang" class="form-control" id="exampleInputEmail1"
+                    placeholder="masukan kategori barang">
             </div>
 
 

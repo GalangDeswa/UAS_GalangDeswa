@@ -52,11 +52,11 @@ class kat_barang extends Controller
          ]
          );
 
-         $tambah->kategori_barang = $request->kategori_toko;
+         $tambah->kategori_barang = $request->kategori_barang;
 
          $tambah->save();
 
-         return redirect('/kat_toko');
+         return redirect('/kat_barang');
     }
 
     /**
@@ -78,7 +78,8 @@ class kat_barang extends Controller
      */
     public function edit($id)
     {
-        //
+         $edit = ModelsKat_barang::find($id);
+         return view('kat_barang.edit',compact('edit'));
     }
 
     /**
@@ -90,7 +91,11 @@ class kat_barang extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $edit = ModelsKat_barang::find($id);
+         $edit->kategori_barang = $request->kategori_barang;
+
+         $edit->save();
+         return redirect('/kat_barang');
     }
 
     /**
@@ -101,6 +106,9 @@ class kat_barang extends Controller
      */
     public function destroy($id)
     {
-        //
+        $hapus = ModelsKat_barang::find($id);
+        $hapus->delete();
+
+        return redirect('/kat_barang');
     }
 }

@@ -45,9 +45,16 @@
             </div>
 
             <div class="form-group">
-                <label for="exampleInputEmail1">id toko barang</label>
-                <input type="text" name="id_toko_barang" class="form-control" id="exampleInputEmail1"
-                    placeholder="masukan id toko">
+                <h6>Toko pemilik</h6>
+                <div class="form-control">
+                    <select name="id_toko_barang" id="" @error('id_kat_barang') is-invalid" @enderror
+                        value="{{old('id_kat_barang')}}">
+                        <option value="">Pilih pemilik toko</option>
+                        @foreach ($toko as $item)
+                        <option value={{$item->id_toko}}>{{$item->nama_toko}}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
 
             <div class="form-group">

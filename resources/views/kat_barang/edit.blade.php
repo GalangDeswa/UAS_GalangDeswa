@@ -3,14 +3,14 @@
 @section('content')
 
 <div class="content-wrapper">
-    <form action="/kat_toko/edit/{{$edit->id_kat_toko}}" method="POST">
+    <form action="/kat_barang/edit/{{$edit->id_kat_barang}}" method="POST">
         @csrf
         @method('PUT')
         <div class="card-body">
             <div class="form-group">
-                <label for="exampleInputEmail1">Kategori toko</label>
-                <input type="text" name="kategori_toko" class="form-control" id="exampleInputEmail1"
-                    placeholder="masukan kategori toko" value="{{ $edit->kategori_toko}}">
+                <label for="exampleInputEmail1">Kategori barang</label>
+                <input type="text" name="kategori_barang" class="form-control" id="exampleInputEmail1"
+                    placeholder="masukan kategori barang" value="{{ $edit->kategori_barang}}">
             </div>
 
 
