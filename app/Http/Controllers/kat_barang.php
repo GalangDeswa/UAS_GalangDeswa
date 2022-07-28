@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\kat_barang as ModelsKat_barang;
+use App\Models\toko;
 use Illuminate\Http\Request;
 
 class kat_barang extends Controller
@@ -46,7 +47,7 @@ class kat_barang extends Controller
      */
     public function store(Request $request)
     {
-        $this->authorize('create',kat_barang::class);
+        $this->authorize('create',toko::class);
          $tambah = new ModelsKat_barang();
 
          $request->validate(

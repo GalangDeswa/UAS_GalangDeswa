@@ -7,7 +7,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h3 class="card-title">Table kat toko</h3>
+                    <h3 class="card-title">Table kategori toko</h3>
 
                     <div class="card-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
@@ -28,7 +28,7 @@
                         <thead>
                             <tr>
                                 <th width="20px" class="text-center">No</th>
-                                <th width="280px" class="text-center">kategori</th>
+                                <th width="280px" class="text-center">kategori toko</th>
                                 <th width="280px" class="text-center"><a class="btn btn-primary btn-sm"
                                         href="/kat_toko/form">tambah</a></th>
 

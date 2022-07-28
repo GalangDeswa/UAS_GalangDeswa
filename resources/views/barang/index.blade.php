@@ -100,7 +100,7 @@
                                             </div>
                                             <div class="modal-body text-center">
                                                 @foreach ($data->foto_barang as $item)
-                                                <img src="{{url($item->foto)}}" height="300" alt="Image" />
+                                                <img src="{{url($item->foto)}}" height="350" width="350" alt="Image" />
 
                                                 @endforeach
                                                 {{-- <img src="{{url($data->foto_barang->foto)}}" height="300"

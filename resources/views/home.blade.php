@@ -59,6 +59,7 @@
                     </div>
                 </div>
                 <!-- ./col -->
+                @can('create',App\toko::class)
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-warning">
@@ -74,6 +75,7 @@
                                 class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
+                @endcan
 
                 <div class="col-lg-3 col-6">
                     <!-- small box -->

@@ -29,7 +29,7 @@
                             <tr>
                                 <th width="20px" class="text-center">No</th>
                                 <th width="280px" class="text-center">kategori barang</th>
-                                @can('create',App\kat_barang::class)
+                                @can('create',App\toko::class)
                                 <th width="280px" class="text-center"><a class="btn btn-primary btn-sm"
                                         href="/kat_barang/form">tambah</a></th>
                                 @endcan
@@ -51,7 +51,7 @@
                                             class="fa fa-edit"></i></a>
 
                                     <!-- Button trigger modal -->
-                                    @can('create',App\kat_barang::class)
+                                    @can('create',App\toko::class)
                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
                                         data-target="#b{{$data->id_kat_barang}}">
                                         <i class="fa fa-trash"></i>
