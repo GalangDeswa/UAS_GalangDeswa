@@ -24,6 +24,8 @@ class User extends Authenticatable
         'hak_akses',
     ];
 
+    //protected $primaryKey = 'id_user';
+
     /**
      * The attributes that should be hidden for serialization.
      *

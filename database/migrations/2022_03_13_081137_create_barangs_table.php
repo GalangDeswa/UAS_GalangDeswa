@@ -23,8 +23,7 @@ return new class extends Migration
             $table->string('harga');
             $table->dateTime('waktu');
             $table->string('qty_barang');
-            $table->json('id_foto')->nullable();
-            $table->longText('desc_barang')->nullable();
+            $table->string('desc_barang')->nullable();
             $table->timestamps();
         });
     }

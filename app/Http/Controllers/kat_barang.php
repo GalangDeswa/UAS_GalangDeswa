@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kat_barang as ModelsKat_barang;
 use Illuminate\Http\Request;
 
 class kat_barang extends Controller
@@ -11,9 +12,18 @@ class kat_barang extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+     $this->middleware('auth');
+     }
+
+
     public function index()
     {
-        //
+         $nomor= 0;
+         $kat = ModelsKat_barang::all();
+         return view('kat_barang.index',compact('kat','nomor'));
     }
 
     /**
@@ -23,7 +33,7 @@ class kat_barang extends Controller
      */
     public function create()
     {
-        //
+        return view('kat_barang.create');
     }
 
     /**
@@ -34,7 +44,19 @@ class kat_barang extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $tambah = new ModelsKat_barang();
+
+         $request->validate(
+         [
+         'kategori_barang' => 'required',
+         ]
+         );
+
+         $tambah->kategori_barang = $request->kategori_toko;
+
+         $tambah->save();
+
+         return redirect('/kat_toko');
     }
 
     /**

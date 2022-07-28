@@ -9,5 +9,5 @@ class kat_barang extends Model
 {
     use HasFactory;
 
-    
+    protected $primaryKey = 'id_kat_barang';
 }

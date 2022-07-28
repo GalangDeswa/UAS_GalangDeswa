@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('foto_barangs', function (Blueprint $table) {
             $table->id('id_foto_barang');
             $table->string('id_barang');
-            $table->json('foto')->default('default/nouser.png');
+            $table->string('foto')->default('default/nouser.png');
             $table->timestamps();
         });
     }

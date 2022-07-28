@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\kat_toko;
 use App\Http\Controllers\toko;
 use App\Http\Controllers\barang;
+use App\Http\Controllers\kat_barang;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,3 +50,13 @@ Route::post('/barang/tambah', [barang::class,'store']);
 Route::get('/barang/formedit/{id}', [barang::class,'edit']);
 Route::put('/barang/edit/{id}', [barang::class,'update']);
 Route::delete('/barang/delete/{id}', [barang::class,'destroy']);
+
+
+
+//kat_barang--------------------------------------------------------------------------
+Route::get('/kat_barang', [kat_barang::class,'index']);
+Route::get('/kat_barang/form', [kat_barang::class,'create']);
+Route::post('/kat_barang/tambah', [kat_barang::class,'store']);
+Route::get('/kat_barang/formedit/{id}', [kat_barang::class,'edit']);
+Route::put('/kat_barang/edit/{id}', [kat_barang::class,'update']);
+Route::delete('/kat_barang/delete/{id}', [kat_barang::class,'destroy']);

@@ -168,7 +168,7 @@
                 <a href="/" class="brand-link">
                     <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo"
                         class="brand-image img-circle elevation-3" style="opacity: .8">
-                    <span class="brand-text font-weight-light">MArketplace</span>
+                    <span class="brand-text font-weight-light">MarketPlace</span>
                 </a>
 
                 <!-- Sidebar -->
@@ -226,7 +226,7 @@
 
 
 
-
+                            @can('create',App\toko::class)
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fas fa-edit"></i>
@@ -254,9 +254,16 @@
                                             <p>register barang</p>
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="/kat_barang/form" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>register kategori barang</p>
+                                        </a>
+                                    </li>
 
                                 </ul>
                             </li>
+                            @endcan
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     <i class="nav-icon fas fa-table"></i>
@@ -287,6 +294,12 @@
                                             <p>Table barang</p>
                                         </a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="/kat_barang" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Table kategori barang</p>
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
 
@@ -310,18 +323,7 @@
 
 
                             </li>
-                            <li class="nav-item">
-                                <a href="/login" class="nav-link">
-                                    <i class="nav-icon far fa-circle text-warning"></i>
-                                    <p>Login</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/register" class="nav-link">
-                                    <i class="nav-icon far fa-circle text-info"></i>
-                                    <p>Register</p>
-                                </a>
-                            </li>
+
                         </ul>
                     </nav>
                     <!-- /.sidebar-menu -->

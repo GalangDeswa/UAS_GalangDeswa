@@ -37,8 +37,5 @@ class HomeController extends Controller
     }
 
 
-    public function jumlah_toko(){
-        
-        return view('/',compact('toko'));
-    }
+    
 }

@@ -15,9 +15,7 @@ return new class extends Migration
     {
         Schema::create('kat_barangs', function (Blueprint $table) {
             $table->id('id_kat_barang');
-            $table->string('id_toko');
             $table->string('kategori_barang');
-            $table->string('foto')->default('default/noimg.png');
             $table->timestamps();
         });
     }
