@@ -39,9 +39,10 @@
                                 <th width="280px" class="text-center">QTY</th>
 
 
-
+                                @can('create',App\barang::class)
                                 <th width="280px" class="text-center"><a class="btn btn-primary btn-sm"
                                         href="/barang/form">tambah</a></th>
+                                @endcan
 
 
                             </tr>
@@ -76,10 +77,13 @@
                                             class="fa fa-edit"></i></a>
 
                                     <!-- Button trigger modal -->
+                                    @can('create',App\barang::class)
                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
                                         data-target="#b{{$data->id_barang}}">
                                         <i class="fa fa-trash"></i>
                                     </button>
+                                    @endcan
+
 
                                 </td>
 

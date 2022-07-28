@@ -23,6 +23,7 @@ class kat_toko extends Controller
 
     public function index()
     {
+        
         $nomor= 0;
         $kat = ModelsKat_toko::all();
         return view('kat_toko.index',compact('kat','nomor'));
@@ -46,7 +47,10 @@ class kat_toko extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+    
     {
+
+        
         $tambah = new ModelsKat_toko();
 
         $request->validate(

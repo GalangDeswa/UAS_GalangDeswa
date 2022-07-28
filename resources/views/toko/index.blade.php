@@ -38,9 +38,11 @@
 
 
 
-
+                                @can('create',App\toko::class)
                                 <th width="280px" class="text-center"><a class="btn btn-primary btn-sm"
                                         href="/toko/form">tambah</a></th>
+                                @endcan
+
 
 
                             </tr>
@@ -68,15 +70,18 @@
                                         data-target="#a{{$data->id_toko}}">
                                         <i class="fa fa-image"></i>
                                     </button>
-
+                                    @can('create',App\toko::class)
                                     <a class="btn btn-primary btn-sm" href="/toko/formedit/{{$data->id_toko}}"><i
                                             class="fa fa-edit"></i></a>
+                                    @endcan
 
                                     <!-- Button trigger modal -->
+                                    @can('create',App\toko::class)
                                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
                                         data-target="#b{{$data->id_toko}}">
                                         <i class="fa fa-trash"></i>
                                     </button>
+                                    @endcan
 
                                 </td>
 

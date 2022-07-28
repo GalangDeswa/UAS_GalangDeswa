@@ -214,9 +214,9 @@
                                 </a>
                                 <ul class="nav nav-treeview">
                                     <li class="nav-item">
-                                        <a href="../../index.html" class="nav-link">
+                                        <a href="/" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
-                                            <p>Dashboard v1</p>
+                                            <p>Main menu</p>
                                         </a>
                                     </li>
 
@@ -254,12 +254,7 @@
                                             <p>register barang</p>
                                         </a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a href="../forms/validation.html" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>check user</p>
-                                        </a>
-                                    </li>
+
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -277,12 +272,15 @@
                                             <p>Table Toko</p>
                                         </a>
                                     </li>
+                                    @can('create',App\toko::class)
                                     <li class="nav-item">
                                         <a href="/kat_toko" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Table kategori toko</p>
                                         </a>
                                     </li>
+                                    @endcan
+
                                     <li class="nav-item">
                                         <a href="/barang" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
@@ -291,61 +289,6 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-header">EXAMPLES</li>
-
-
-                            <li class="nav-item menu-open">
-
-                                <ul class="nav nav-treeview">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            <i class="far fa-circle nav-icon"></i>
-                                            <p>
-                                                Login & Register v1
-                                                <i class="fas fa-angle-left right"></i>
-                                            </p>
-                                        </a>
-                                        <ul class="nav nav-treeview">
-                                            <li class="nav-item">
-                                                <a href="../examples/login.html" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Login v1</p>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="../examples/register.html" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Register v1</p>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="../examples/forgot-password.html" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Forgot Password v1</p>
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a href="../examples/recover-password.html" class="nav-link">
-                                                    <i class="far fa-circle nav-icon"></i>
-                                                    <p>Recover Password v1</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-
-
-
-
-
-
-
-
-                                </ul>
-                            </li>
-
-                            <li class="nav-header">MISCELLANEOUS</li>
-
 
 
 
@@ -368,13 +311,13 @@
 
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/login" class="nav-link">
                                     <i class="nav-icon far fa-circle text-warning"></i>
                                     <p>Login</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="/register" class="nav-link">
                                     <i class="nav-icon far fa-circle text-info"></i>
                                     <p>Register</p>
                                 </a>

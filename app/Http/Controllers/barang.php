@@ -26,7 +26,8 @@ class barang extends Controller
 
      
     public function index()
-    {
+    {   
+        
         $nomor= 0;
         $barang = ModelsBarang::all();
        // $id_barang = $barang->id_toko_barang;
@@ -41,7 +42,7 @@ class barang extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {       
+    { $this->authorize('create',barang::class);
         $kat=kat_barang::all();
 
          return view('barang.create',compact('kat'));
@@ -54,7 +55,10 @@ class barang extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+    
     {
+
+        $this->authorize('create',barang::class);
         $tambah = new ModelsBarang();
         
 

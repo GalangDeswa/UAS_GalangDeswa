@@ -22,6 +22,7 @@ class toko extends Controller
     
     public function index()
     {
+        //$this->authorize('create',toko::class);
         $nomor= 0;
         $toko = ModelsToko::all();
         $barang = barang::all();
@@ -36,6 +37,7 @@ class toko extends Controller
     public function create()
     
     {
+        $this->authorize('create',toko::class);
         $kat = kat_toko::all();
         return view('toko.create',compact('kat'));
       
@@ -52,6 +54,7 @@ class toko extends Controller
      */
     public function store(Request $request)
     {
+         $this->authorize('create',ModelsToko::class);
          $tambah = new ModelsToko();
 
           $request->validate(
